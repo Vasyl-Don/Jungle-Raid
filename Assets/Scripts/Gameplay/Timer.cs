@@ -18,7 +18,7 @@ namespace Gameplay
         private void Start()
         {
             _timerText = GetComponent<TMP_Text>();
-            _secondsLeft = _secondsLeftForEachLevel[SceneManager.GetActiveScene().buildIndex % 10 + 1];
+            _secondsLeft = _secondsLeftForEachLevel[SceneManager.GetActiveScene().buildIndex % 10];
             UpdateTimerText();
             _gameManager = GameManager.Instance;
         }
