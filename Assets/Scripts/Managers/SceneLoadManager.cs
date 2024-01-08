@@ -11,18 +11,19 @@ namespace Managers
         private WindowsManager _windowsManager;
         private AudioManager _audioManager;
         [SerializeField] private Canvas _loadingCanvas;
-        private Slider _loadingBar;
+        [SerializeField] private Slider _loadingBar;
+
 
         private const float StartLoading = 0f;
         private const float FinishLoading = 1f;
-        private const float LoadingTime = 1f;
+        private const float LoadingTime = 7.5f;
         private float _timeElapsed;
 
         private void Start()
         {
             _windowsManager = WindowsManager.Instance;
             _audioManager = AudioManager.Instance;
-            _loadingBar = _loadingCanvas.GetComponentInChildren<Slider>();
+
             StartCoroutine(StartGameCoroutine());
         }
 
